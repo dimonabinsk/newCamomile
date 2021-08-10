@@ -1,0 +1,30 @@
+@mixin mediaScreenMax($sizeScreen) {
+  @media (max-width: ($sizeScreen)) {
+    @content;
+  }
+}
+
+@mixin mediaScreenMin($sizeScreen) {
+  @media (min-width: ($sizeScreen)) {
+    @content;
+  }
+}
+
+@mixin mediaScreen($sizeScreen) {
+  @media (width: ($sizeScreen)) {
+    @content;
+  }
+}
+
+@mixin anyHover {
+  @media (any-hover: hover) {
+    @content;
+  }
+}
+
+
+
+
+
+
+

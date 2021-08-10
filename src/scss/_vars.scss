@@ -1,0 +1,19 @@
+// COLORS
+:root {
+  --color-black: #000;
+  --color-white: #fff;
+  --color-codgray: #111111;
+  --color-dark: #151515;
+}
+
+
+// burger
+
+:root {
+  --burger-width: 20px;
+  --burger-hight: calc((var(--burger-lineHight)) * 6);
+  --burger-lineHight: 3px;
+  --burger-linetop1: 0;
+  --burger-linetop2: calc((var(--burger-lineHight)) * 2);
+  --burger-linetop3: calc((var(--burger-lineHight)) * 4);
+}
