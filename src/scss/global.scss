@@ -1,0 +1,16 @@
+.links {
+  color: var(--color-black);
+  border: 2px solid rgba(96, 137, 81, 0);
+  transition: 0.3s;
+
+  &:hover,
+  &:active {
+    border-bottom: 2px solid rgba(96, 137, 81, 1);
+    color: var(--color-hippieGreen);
+  }
+
+  &:focus {
+    border: 2px solid var(--color-black);
+    color: var(--color-hippieGreen);
+  }
+}

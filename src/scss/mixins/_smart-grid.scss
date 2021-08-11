@@ -5,7 +5,7 @@ $break_lg: 1100px;
 $break_md: 960px;
 $break_sm: 780px;
 $break_xs: 560px;
-$break_phone: 420px;
+$break_phone: 320px;
 
 $offset: 20px;
 $offset_lg: $offset;
@@ -21,12 +21,24 @@ $offset_sm_one_side: ($offset_sm / 2);
 $offset_xs_one_side: ($offset_xs / 2);
 $offset_phone_one_side: ($offset_phone / 2);
 
-$fields: 30px;
+$fields: 120px;
+$fields_lg: 60px;
+$fields_md: 30px;
 $fields_sm: 15px;
 
 @mixin wrapper-full(){
     padding-left: $fields;
     padding-right: $fields;
+
+    @include lg-block(){
+        padding-left: $fields_lg;
+        padding-right: $fields_lg;
+    }
+
+    @include md-block(){
+        padding-left: $fields_md;
+        padding-right: $fields_md;
+    }
 
     @include sm-block(){
         padding-left: $fields_sm;
@@ -45,7 +57,7 @@ $fields_sm: 15px;
 }
 
 @mixin wrapper(){
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     @include wrapper-full();
 }
