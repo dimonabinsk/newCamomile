@@ -17,6 +17,10 @@
     transition: 0.5s ease-in-out;
     cursor: pointer;
 
+    @include mediaScreenMax(960px) {
+      display: block;
+    }
+
     &__line {
       display: block;
       position: absolute;
@@ -59,7 +63,7 @@
 
       .burger__line:nth-child(2) {
         opacity: 0;
-        left: 20px;
+        left: -20px;
       }
 
       .burger__line:nth-child(3) {
@@ -82,4 +86,3 @@
     }
   }
 }
-

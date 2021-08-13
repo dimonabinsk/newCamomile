@@ -10,13 +10,14 @@ html {
 
 body {
   margin: 0;
-  font-family: "Futura","asd", sans-serif;
+  font-family: "Futura", "asd", sans-serif;
 
 }
+
 ::-webkit-scrollbar {
-	width: 5px;
-	height: 5px;
-	background-color: var(--color-black);
+  width: 5px;
+  height: 5px;
+  background-color: var(--color-black);
 }
 
 img {
@@ -33,13 +34,13 @@ ul {
 }
 
 .btn-reset {
-	appearance: none;
-	border-radius: 0;
-	opacity: 1;
-	border: none;
-	background-color: transparent;
-	font: inherit;
-	cursor: pointer;
+  appearance: none;
+  border-radius: 0;
+  opacity: 1;
+  border: none;
+  background-color: transparent;
+  font: inherit;
+  cursor: pointer;
 }
 
 .is-outer {
@@ -52,15 +53,16 @@ ul {
 }
 
 .sr-only {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
+
 .is-hidden {
   display: none !important; // stylelint-disable-line declaration-no-important
 }
@@ -79,10 +81,10 @@ ul {
   max-width: 1200px;
 }
 
-.js-focus-visible :focus:not(.focus-visible) {
-  outline: none;
-}
+// .js-focus-visible :focus:not(.focus-visible) {
+//   outline: none;
+// }
 
 .main {
-	@include wrapper();
-  }
+  @include wrapper();
+}

@@ -1,11 +1,47 @@
 .banner {
   position: relative;
+  top: 94px;
   width: 100%;
   height: 749px;
+  margin-bottom: calc(160px + (260 - 160)*((100vw - 320px)/(1440 - 320)));
   background-image: url(../img/pages/home/imgBanner.jpg);
-  background-size: (66% 100%);
-  background-position-x: 65%;
+  background-size: (75% 100%);
+  background-position-x: 80%;
   background-repeat: no-repeat;
+
+
+  @include mediaScreenMax(1440px) {
+    background-size: (66% 100%);
+    background-position-x: 65%;
+  }
+
+
+  @include mediaScreenMax(1200px) {
+    background-size: (75% 100%);
+    background-position-x: 80%;
+  }
+
+  @include mediaScreenMax($break_lg) {
+    background-size: (80% 100%);
+    background-position-x: 100%;
+  }
+
+  @include mediaScreenMax($break_md) {
+    width: calc(100% + 60px);
+    background-size: (80% 100%);
+  }
+
+  @include mediaScreenMax($break_sm) {
+    height: 650px;
+    background-size: (87% 100%);
+  }
+
+  @include mediaScreenMax(460px) {
+    width: 100%;
+    height: 450px;
+    background-size: (87% 60%);
+    background-position-y: 100%;
+  }
 
   &__title {
     margin: 0;
@@ -15,6 +51,15 @@
     font-weight: 400;
     font-size: 64px;
     line-height: 77px;
+
+    @include mediaScreenMax($break_sm) {
+      top: 144px;
+    }
+
+    @include mediaScreenMax(460px) {
+      font-size: 36px;
+      top: 0;
+    }
   }
 
   &__txt {
@@ -28,6 +73,16 @@
     font-size: 36px;
     line-height: 53px;
     color: var(--color-fernGreen);
+
+    @include mediaScreenMax($break_sm) {
+      top: 222px;
+    }
+
+    @include mediaScreenMax(460px) {
+      top: 50px;
+      left: 145px;
+      font-size: 24px;
+    }
   }
 
   &__description {
@@ -37,7 +92,17 @@
     left: 0;
     top: 379px;
     font-weight: 400;
+    font-size: 16px;
     line-height: 24px;
+
+    @include mediaScreenMax($break_sm) {
+      top: 279px;
+    }
+
+    @include mediaScreenMax(460px) {
+      top: 100px;
+      max-width: 400px;
+    }
   }
 
   &__btn {
@@ -46,12 +111,26 @@
     position: absolute;
     left: 0;
     top: 479px;
-    background: transparent;
+    background: var(--color-withe);
     border: 2px solid var(--color-fernGreen);
     color: var(--color-fernGreen);
     line-height: 24px;
     transition: 0.3s;
     transition-property: background-color, color, border-color;
+
+    @include mediaScreenMax($break_sm) {
+      top: 379px;
+    }
+
+    @include mediaScreenMax(460px) {
+      top: 229px
+    }
+
+    @include mediaScreenMax($break_phone) {
+      top: 200px;
+    }
+
+
 
     &:hover,
     &:active {
@@ -74,6 +153,23 @@
     top: 50%;
     transform: translateY(-50%);
     text-align: right;
+
+    @include mediaScreenMax($break_md) {
+      right: calc(100% - 30px);
+      top: 100%;
+      transform: translateY(-95px);
+
+    }
+
+    @include mediaScreenMax(460px) {
+      transform: translateY(-105px);
+    }
+
+    @include mediaScreenMax($break_phone) {
+      transform: translateY(-115px);
+    }
+
+
   }
 
   &__item-social {
@@ -84,8 +180,6 @@
       margin-bottom: 20px;
     }
   }
-
-  //   &__social-link::before {
-
-  //   }
 }
+
+

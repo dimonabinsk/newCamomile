@@ -1,11 +1,23 @@
-//
 .header {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  top: 0;
   @include wrapper();
   padding-top: 33px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--color-withe);
+
+  @include mediaScreenMax(960px) {
+    padding-top: 23px;
+  }
+
 }
+
+@include burger();
 
 .logo {
   &__link {
@@ -29,16 +41,59 @@
 }
 
 .nav {
-  &__list {
-    display: flex;
+  display: none;
+}
+
+.nav--open {
+  display: block;
+  position: fixed;
+  padding-top: 90px;
+  padding-bottom: 50px;
+  // overflow: hidden;
+  overflow-x: auto;
+  top: 85px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-withe);
+  opacity: 0;
+  transition: opacity 0.5s;
+
+
+  .nav__list {
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    left: 23px;
   }
 
-  &__item {
-    &:not(:last-child) {
-      margin-right: calc(10px + (38 - 10)*((100vw - 320px)/(1440 - 320)));
+  .nav__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .nav__link {
+    font-size: 34px;
+  }
+}
+
+@include mediaScreenMin(960px) {
+  .nav {
+    display: block;
+
+    &__list {
+      display: flex;
+    }
+
+    &__item {
+      &:not(:last-child) {
+        margin-right: calc(10px + (38 - 10)*((100vw - 320px)/(1440 - 320)));
+      }
     }
   }
 }
+
+
+
 
 .user {
   &__list {
@@ -72,5 +127,18 @@
   &:active,
   &:focus {
     color: var(--color-hippieGreen);
+  }
+}
+
+
+.search {
+  @include mediaScreenMax(960px) {
+    position: absolute;
+    left: 60px;
+  }
+
+  @include mediaScreenMax(780px) {
+
+    left: 40px;
   }
 }
