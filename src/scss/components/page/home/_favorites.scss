@@ -1,0 +1,42 @@
+.favorites {
+  position: relative;
+  padding-bottom: calc(60px + (160 - 60)*((100vw - 320px)/(1440 - 320)));
+
+  // .favorites__title
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-size: 64px;
+    line-height: 128px;
+  }
+
+  // .favorites__link-view
+
+  &__link-view {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 100%;
+    bottom: 100%;
+    transform: translate(-100%, 100%);
+    color: var(--color-fernGreen);
+    line-height: 128px;
+
+    span {
+      padding: 0 0 0 5px;
+    }
+
+    @include mediaScreenMax(560px) {
+      left: 0;
+      bottom: 0;
+      transform: translate(0, 0);
+    }
+  }
+
+  // .favorites__card
+
+  &__card {
+    @include row-flex();
+  }
+}

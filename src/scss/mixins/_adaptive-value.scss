@@ -1,0 +1,9 @@
+@mixin adaptive_management_with-media-queries($sizeScreen, $screenSizeMin, $property, $valueMax, $valueMin) {
+  @media (max-width: ($sizeScreen + "px")) {
+    $property: calc(($valueMin + "px") + ($valueMax - $valueMin)*((100vw - ($screenSizeMin + "px"))/($sizeScreen - $screenSizeMin)));
+  }
+}
+
+@mixin adaptive_management($screenSizeMax, $screenSizeMin, $property, $valueMax, $valueMin) {
+  $property: calc(($valueMin + "px") + ($valueMax - $valueMin)*((100vw - ($screenSizeMin + "px"))/($screenSizeMax - $screenSizeMin)));
+}

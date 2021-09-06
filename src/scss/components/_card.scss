@@ -1,0 +1,62 @@
+.card {
+  margin-bottom: 20px;
+  @include col();
+  @include size(3);
+  @include size-sm(6);
+  @include size-xs(12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mediaScreenMax(560px) {
+    &:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
+  // .card__inner
+
+  &__inner {
+    position: relative;
+    margin-bottom: 10px;
+    width: 100%;
+
+    &:hover {
+      .card__btn-add {
+        opacity: 1;
+      }
+    }
+  }
+
+  // .card__img
+
+  &__img {
+    width: 100%;
+  }
+
+  // .card__btn-add
+
+  &__btn-add {
+    position: absolute;
+    padding: 12px 32px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    background-color: var(--color-withe);
+    color: var(--color-fernGreen);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  // .card__name
+
+  &__name,
+  &__prace {
+    line-height: 19px;
+    color: var(--color-black);
+  }
+
+  // .card__prace
+
+  &__prace {}
+}

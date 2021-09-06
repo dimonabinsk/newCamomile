@@ -5,6 +5,7 @@
   @include mediaScreenMax(960px) {
     display: block;
     margin-bottom: calc(80px + (120 - 80)*((100vw - 320px)/(960 - 320)));
+    // @include adaptive_management(960, 320, margin-bottom, 100, 40);
   }
 
 
@@ -26,12 +27,9 @@
     .category__link {
       top: 80px;
       left: 60px;
-      // font-size: 64px;
-      font-size: calc(48px + (64 - 48)*((100vw - 320px)/(1920 - 320)));
+      @include adaptive_management(1200, 320, font-size, 64, 48);
 
-      @include mediaScreenMax(960px) {
-        font-size: calc(36px + (64 - 36)*((100vw - 320px)/(960 - 320)));
-      }
+      @include adaptive_management_with-media-queries(960, 320, font-size, 64, 36);
     }
 
     &--live {
@@ -139,9 +137,7 @@
     color: var(--color-black);
     transition: color 0.3s;
 
-    @include mediaScreenMax(960px) {
-      font-size: calc(36px + (42 - 36)*((100vw - 320px)/(960 - 320)));
-    }
+    @include adaptive_management_with-media-queries(960, 320, font-size, 42, 36);
 
     &:hover,
     &:active {
